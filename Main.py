@@ -8,23 +8,17 @@ class Vehicle:
         self.type = type
 
     def getdetails(self):
-        print("The Vehicle are manufactured by" + self.brand)
+        print("The Vehicle are manufactured by " + self.brand)
         print("The Vehicle model are " + self.model)
         print("The Vehicle type are " + self.type + "\n")
 
 
 class SchoolBus(Vehicle):
-    def getdetails(self):
-        print("The Vehicle are manufactured by " + self.brand)
-        print("The Vehicle model are " + self.model)
-        print("The Vehicle type are " + self.type + "\n")
+    pass
+
 
 class car(Vehicle):
-    def getdetails(self):
-        print("The Vehicle are manufactured by" + self.brand)
-        print("The Vehicle model are " + self.model)
-        print("The Vehicle type are " + self.type + "\n")
-
+    pass
 vehicles = [car("Toyota", "Vios", "Private"), SchoolBus("Yutong", "K6876H", "Public")]
 
 
@@ -51,7 +45,7 @@ class Employee:
         return cls(name = "Unknown", position="N/A", department= department)
 
     def empdetails(self):
-        return f"Name: {self.name}, Position: {self.position}, Department: {self.department}"
+        return f"Name: {self.name}, Position: {self.position}, Department: {self.department} \n"
 
 employee1 = Employee.name("Bryan")
 print(employee1.empdetails())
@@ -126,7 +120,7 @@ class SchoolTwo:
         self.students.append(Student(name,grades))
 
     def displaystudents(self):
-        print("School One Record")
+        print("School Two Record")
         for student in self.students:
             student.student_info()
             print()
